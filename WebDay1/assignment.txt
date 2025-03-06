@@ -1,0 +1,22 @@
+index.html
+-----------------------
+<a href="ProductForm.jsp"
+
+
+ProductForm.jsp
+--------------------------
+TextFields  -- pid ,pname ,price
+
+Submit to "ProductServlet"
+
+
+ProductServlet
+-------------------------
+Validate pid,pname,price
+
+If valid 
+generate Product object and send to Success.jsp
+
+else
+ Go to ProductForm.jsp and print error messagees
+

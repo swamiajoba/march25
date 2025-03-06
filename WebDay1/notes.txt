@@ -1,0 +1,101 @@
+An Internet is a network of networks. It is a place where we can access any kind
+of information.
+
+While commnunication on network internet uses TCP/IP (Transmission Control Protocol /
+Internet Protocol)  network protocol.
+
+When Client ie browser sends request to the server and gets response from the server ,
+it uses application protocol http (hyper text transfer protocol ) .
+
+Request is called as http request.
+Response is called as http response.
+
+URL -> Unifrom Resource Locator
+eg. https://www.amazon.in/
+
+https => hyper text transfer protocol secure
+(smtp=>simple mail transfer protocol , ftp=> file transfer protocol)
+
+www => world wide web  => any public
+
+amezon => domain name associated with IP address of the server
+
+in => India
+
+(.com => commertial  ,
+ .net => networked 
+ .us => for US ,
+ .gov => government ,
+ .edu => educational )
+
+Sometimes url consist of web page name or web program name.
+
+JEE server sits at Middle Tier.
+JEE => Java Enterprise Edition
+
+IT consist of 2 Containers.
+1. Web Container -
+==> Html , JavaScript , Servelts ,JSP , JavaBeans
+
+2. EJB  ( Enterprise Java Bean ) container -
+==>  Session Bean , Entity Beans and other EJBs....
+
+When JEE server contains only web container then that server is called as WEB Server.
+eg. Tomcat
+
+When JEE server contains both containers then that server is called as AN APPLICATION Server.
+eg. Web Logic , Oracle Apache, IBM Websphere , Glossfish
+
+
+Folder Structure of an web application
+
+MyWebProject (root folder )
+	| .html  .jsp  .js images
+	|---- WEB-INF
+	|	| web.xml  == >  web application configuration file (deployment descriptor )
+	|
+	|- -- classes  -- > servlet classes, javabean classes	
+
+
+Context - root is a url used by browser to access web application on the server.
+
+Servlet Configuration
+-> servlet name   --> DemoServlet
+-> servlet class with package -- > com.controller.DemoServlet
+-> url pattern  --> /DemoServlet.view
+
+
+
+
+jakarta.servlet.GenericServlet --> implements  interface jakarta.servlet.Servlet
+	|
+	|
+jakarta.servlet.http.HttpServlet
+`	|
+	|
+com.controller.DemoServlet
+
+Class is said to be servlet , if it implments Servlet interface
+
+GenericServlet can handle any protocol request ie http,ftp, smtp.
+whereas
+HttpServlet can handle only http protocol requests. for eg 
+http methods   -- get,post ,put,delete,option...
+for each http method HttpServlet has respective method to handle request
+for eg. doGet , doPost ................
+
+
+get method  -- > form data can be send via url and visible to url.  Lmited data can be send
+default http method is get method
+
+
+post method --> form data is sent via http request body , not as a url . Unlimited data can be send
+
+
+
+
+
+
+
+
+
