@@ -1,0 +1,137 @@
+SDLC
+---------
+
+Planning
+
+Requirement Anlysis
+------------------------------
+Software build phases
+---------------------------------
+
+Designing
+
+
+Coding
+------------------
+properties files ,configruation files, resources
+source code
+compiling code
+create documents
+
+
+
+Testing
+-----------
+create resources
+create test classes
+compiling test cases
+run test
+generate reports
+
+package 
+------------
+create a zip like file such as jar,war,ear for an application for distribution purpose
+
+install
+--------------
+make this jar,war,ear available to local repository
+
+
+deploying
+-------------------------
+make this jar,war,ear available to coprotate  repository ( for clients )
+
+maintainance
+
+
+
+Maven is  build tool which automates SDLC build phase.
+
+
+
+For JDBC program , we require driver jar .
+ie Application is depedent on dirver jar This is called as depedancy.
+
+Maven can download depedent  dirver jar
+
+Depedancy management is done by maven
+
+
+
+
+Convention over configuration --> 
+There is a project folder structure, naming convention, declarative model
+ has to be followed by all developers to use and create maven project
+
+
+unifrom build system
+------------------------------------
+
+Structure of Maven
+----------------------------------
+pom.xml = > Project  Object Model
+--> Application info -> groupId ,artifactID , name , version
+--> properties --> source and targate code version, other lib version 
+--> dependencies --> these are downloaded on internet from maven cetral repository
+--> Build info , Plugin config ,
+
+
+Maven components -->
+
+maven  --> phases , plugins ,goals
+
+phases => it corresponses to sdlc life cycle phases , runs the phases by using plugin:goal
+
+plugin => it is a piece of code in maven which runs phases with actions
+
+goal => actions names or commands within a phase
+
+Maven has three build life cycle 
+---------------------------------
+	clean  => cleans all compiled jars created  ie cleans the project
+
+	default (build life cycle ) ==> used for compile,test..... 23 phases
+
+	site = > to generate document
+
+Each life cycle consist of multiple phases
+-----------------------------------------------------
+
+
+mvn compile  --->
+mvn --> maven command
+compile -- > compile phase of default life cycle which runs  compiler:compile where compiler is a plugin and :compile is a 
+	action or goal
+
+alternatively above command can be given
+mvn compiler:compile
+
+
+
+
+
+
+
+
+Maven has following repository --> plcace to store downloaded plugins,dependancies ...
+
+Local Repository -- > plcace on a local machine
+defaulst folder is->  C:\Users\Admin\.m2
+
+Remote repository - > corporate repository place on the internet from where it is downloaded
+
+Central Repository -> maven remote repository on the internet
+
+
+
+
+
+
+
+
+
+
+
+
+
+
