@@ -1,0 +1,67 @@
+Http protocol is a stateless protocol. It does not carry the information of previous request to next request.
+
+Session tracking is a mechanism , which stores the information in a session.
+Session is available per user.
+
+For every user Server generates sessionID. Using sessionID server can keep a track of session.
+
+Session tracking are 4 ways.
+1. Input type hidden -- > Input type hidden can be exctracted by next page using request.getParameter()
+Input type hidden or url editing  has to be done on every page.
+
+2. HttpSession --> Using HttpSession  , server can keep a track of Ssession data.
+
+
+HttpSession session= request.getSession(true);  --> generate new sessionID ie new session
+
+HttpSession session= request.getSession(false);  --> use existing sessionID ie old session
+
+HttpSession session= request.getSession();  --> generate new sessionID ie new session if does not exist else use old session
+
+3. Cookies ->
+	Cookies are set of key, value pairs which is generated first time by the server.
+	Server sends these key,value pair cookies to the client(browser) .
+	Browser stores these cookies at client side and sends them to the server from next request onwords
+
+4. URL Rewrite ->  This technique will take place only when cookies at browser side are disabled.
+		In this technique ,  Previous page has to encode url of next page along with JSESSIONID.
+		so that next page receives JSESSIONID and it is confirmed by server that another request is coming 
+		from same user.
+
+		HttpServletResponse response;
+		response.encodeURL(url);
+
+Filter   : -  PreProcessor of PostProcessor for a perticular web page (servlet , JSP )
+-------------
+
+Filter API 
+=> Class that implements Filter interface.
+=>  This Filter has three methods
+	public void init(FilterConfig )
+	public void doFilter(ServletRequest request , ServletResponse response , FilterChain chain) 
+		-> ServletRequest is a super interface of HttpServletRequest 
+		-> ServletResponse is a super interface of  HttpServletResponse
+	public void destroy()
+     When Filter loaded , the init and destroy method gets executed only once
+=> Every filter has three components
+	-> Filter class name
+	-> Filter name
+	-> urls on which filter is applied
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
