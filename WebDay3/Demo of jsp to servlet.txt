@@ -1,0 +1,21 @@
+
+import java.time.LocalDateTime;
+
+public class Demo2 {
+
+	int res=0;
+	public int add(int a,int b) {
+		return a+b;
+	}
+
+	public void _jspService(request,response)
+	{
+		response.setContentType("text/html");
+		String name="name";
+		out.println(name);
+		out.prinln(add(10,20);
+
+	}
+
+
+}

@@ -1,0 +1,88 @@
+JSP  - Java Server Pages  
+This is said to be java in HTML.
+
+Lifcycle
+
+1. Locate this page Demo1.jsp
+2. Transform this page to the servlet class
+3. Servlet class is instantiated.
+4. call life cycle method
+  public void jspInit()
+  The above method gets executed only once
+5. call life cycle method
+   public void jspService(request,response)
+   This method is called on every request. and sends response
+6. When you shut down application , it calls 
+   life cycle method
+   public void jspDestroy()
+
+
+JSP is having 5 types of syntax
+
+1. Directive  -
+ 	There are three directives
+	<%@page   %>  --> direction to web page
+	<%@include   %> -- > includes another file
+	<%@taglib   %>  --> refer custom tags library
+
+2. Scriptlets
+	<% LocalDate today=LocalDate.now();  %>
+
+	In Scriptlets we wirte Java Program in jsp.
+
+3. Expression
+	<%=today %>
+
+	Used for printing variable value	
+	This is equivalent to <% out.println(today); %>
+
+4. JSP Comment
+	<%-- comment --%>
+
+5. Declaration tag
+
+	<%!     variables,methods    %>
+
+	Will get initialized only once
+
+
+
+Implicit Object   -- objects which are readymade available in jsp
+-------------------
+
+Object		Class
+
+out		JSPWriter
+request		HttpServletRequest
+response		HttpServletResponse
+session		HttpSession
+application	ServletContext
+exception		Exception
+config		ServletConfig
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
