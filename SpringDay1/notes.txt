@@ -1,0 +1,190 @@
+public class Address {
+	private int aid;
+	private String city;
+	private String zip;
+	public Address() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Address(int aid, String city, String zip,String country) {
+		super();
+		this.aid = aid;
+		this.city = city;
+		this.zip = zip;
+		this.country=country;
+	}
+
+-------------- setter , getter
+}
+
+package com;
+
+public class Employee {
+	private int  eid;
+	private String ename;
+	private double salary;
+	private Address address;
+	public Employee() {
+		
+	}
+	public Employee(int eid, String ename, double salary) {
+		super();
+		this.eid = eid;
+		this.ename = ename;
+		this.salary = salary;
+		this.address=new Address(10,"Pune","400004");   -- If you modify address , then we have to modify Employee also
+		// tightly coupled
+	}
+}
+
+===============================
+When you modify original object, you have to also modify depedent object  and this issue is called as tightly coupled
+
+In order to resolve this , we need to use Depedency injection
+===================================
+
+In loose coupling even if you modify original object, you do not need to modify depedent objct.
+This is achieved by using depedency injection.
+Constructor injection.
+Setter injection
+
+
+package com;
+
+public class Address {
+	private int aid;
+	private String city;
+	private String zip;
+	private String country;
+	public Address() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Address(int aid, String city, String zip,String country) {
+		super();
+		this.aid = aid;
+		this.city = city;
+		this.zip = zip;
+		this.country=country;
+	}
+
+	public int getAid() {
+		return aid;
+	}
+	public void setAid(int aid) {
+		this.aid = aid;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public String getZip() {
+		return zip;
+	}
+	public void setZip(String zip) {
+		this.zip = zip;
+	}
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
+	
+
+}
+
+
+package com;
+
+public class Employee {
+	private int  eid;
+	private String ename;
+	private double salary;
+	private Address address;
+	public Employee() {
+		
+	}
+	//Constructor injection
+	public Employee(int eid, String ename, double salary, Address address) {
+		super();
+		this.eid = eid;
+		this.ename = ename;
+		this.salary = salary;
+		this.address = address;
+	}
+	public int getEid() {
+		return eid;
+	}
+	public void setEid(int eid) {
+		this.eid = eid;
+	}
+	public String getEname() {
+		return ename;
+	}
+	public void setEname(String ename) {
+		this.ename = ename;
+	}
+	public double getSalary() {
+		return salary;
+	}
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+	public Address getAddress() {
+		return address;
+	}
+	//setter injection
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+	
+}
+
+package com;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		
+		Address adr=new Address(10,"Pune","4004","India");
+		Employee e1=new Employee(100,"Ram",25000.00,adr);  // constructor injection passing address object
+		
+		e1.setAddress(adr);  // setter injection passing address object
+	}
+
+}
+
+
+
+=====================================
+Spring is a IOC (Inversion of Control ) container.
+The responsibility of developer to generate object and inject depednt Objects is now the responsibility of 
+spring container.
+
+==============================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
