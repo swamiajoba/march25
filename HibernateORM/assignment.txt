@@ -1,0 +1,14 @@
+Catagory
+------------------------
+ctid
+ctname
+
+
+Product
+-------------
+pid
+pname
+price
+
+
+Multiple product belongs to one catagory

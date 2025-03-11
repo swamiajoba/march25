@@ -1,0 +1,67 @@
+public class Employee {
+	private int eid;
+	private String ename;
+	private double salary;
+ -----------
+
+}
+
+
+Employee  table
+eid     ename   salary
+100    Ram     43000
+
+JDBC
+=================
+
+Employee e=new Employee(100,"Ram",43000);
+
+PreparedStatement pst query=> insert into employee values(?,?,?);
+		pst.setInt(1, e.getEid()l
+		pst.setString(2,e.getEname());
+		pst.setDouble(3,e.getSalary());
+	int i= pst.executeUpdate();
+
+In JDBC , developer has to write query for a table,  wirte a 
+program to take data from java object and set it to query ,
+one by one with accurate mapping of java data to column,
+and then execute query.
+
+
+In java we can have One object consist of another object.
+eg. Employee has Address.
+In java , we are having association like one to one, one to many , many to many.
+eg. One Student can opt for multiple Course, One Cource is opted my multiple Student.
+
+In Java, we are having Inheritance,
+
+In above situation, manual mapping in jdbc is tough.
+
+Hibernate resolve all these problems.
+Hibernate is a ORM ( Object Relational Mapping)  tool.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
