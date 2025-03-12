@@ -1,0 +1,65 @@
+In spring scopes of bean are 
+
+Singleton  -- > only one instance of bean is created and used in entire application ie
+	On first getBean instance is created and one second getBean onwords it uses same instance.
+
+Prototype --> On every getBean of bean separate instance is created.
+
+request  -->  Bean is availabe for current page and next page via request object.
+
+session  --> Bean is available for entire session for a perticular user.
+
+application --> Bean is available for entire application as well as all users.
+
+==========================
+
+BeanFactory and ApplicationContext is used to access spring IOC container.
+
+BeanFactory is responsible for creating and managing life cycle of the bean.
+In the BeanFacotry,  BeanPostProcessor and BeanFacotryPostProcessor needs to be registered.
+Using BeanFactory, beans object are generated when we call getBean method ie Bean is generated on demand
+
+
+ApplicationContext is a enhancement of BeanFactory which provided basic + enterprise level
+service of the bean.
+In the ApplicationContext , BeanPostProcessor and BeanFacotryPostProcessor is already  registered.
+Using ApplicationContext  , beans object are generated when ApplicationContext initialized.
+
+
+=========================
+
+Autowiring
+
+--> byType -->  Bean is searched of perticular typed ie bean of Address type is searched created and inject in 
+		Employee automatically by checking class Type
+
+-->byName --> In Employee ,we are having property Address address. ie name of the property is address.
+	         Address bean is searched with same property name as of Employee and injected in Employee
+		
+
+ <bean id="address" class="com.bean.Address">
+<property name="aid" value="11"></property>  
+<property name="city" value="Mumbai"></property>
+<property name="zip" value="400 101"></property>
+
+</bean>
+
+  <!-- Employee is having Address object -->
+
+ 
+ <bean id="empbean" class="com.bean.Employee" scope="singleton" autowire="byName">
+<property name="eid" value="100"></property>
+<property name="ename" value="Manjiri"></property>
+<property name="salary" value="25000.00"></property>
+
+</bean>
+
+
+
+
+
+
+
+
+
+

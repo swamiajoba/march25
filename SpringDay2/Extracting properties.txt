@@ -1,0 +1,33 @@
+59
+
+You can use @PropertySource to externalize your configuration to a properties file. There is number of way to do get properties:
+
+1. Assign the property values to fields by using @Value with PropertySourcesPlaceholderConfigurer to resolve ${} in @Value:
+
+@Configuration
+@PropertySource("file:config.properties")
+public class ApplicationConfiguration {
+
+    @Value("${gMapReportUrl}")
+    private String gMapReportUrl;
+
+    @Bean
+    public static PropertySourcesPlaceholderConfigurer propertyConfigInDev() {
+        return new PropertySourcesPlaceholderConfigurer();
+    }
+
+}
+2. Get the property values by using Environment:
+
+@Configuration
+@PropertySource("file:config.properties")
+public class ApplicationConfiguration {
+
+    @Autowired
+    private Environment env;
+
+    public void foo() {
+        env.getProperty("gMapReportUrl");
+    }
+
+}
