@@ -1,0 +1,3 @@
+com\nucleus\controller\UserController.class
+com\nucleus\bean\User.class
+com\nucleus\config\SpringConfig.class
