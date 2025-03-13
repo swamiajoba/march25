@@ -1,0 +1,4 @@
+com\nucleus\controller\UserController.class
+com\nucleus\config\SpringConfig.class
+com\nucleus\config\WebServletConfiguration.class
+com\nucleus\bean\User.class
