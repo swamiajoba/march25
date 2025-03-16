@@ -1,0 +1,251 @@
+CSS -- > Cascade Style Sheet
+
+Purpose - > adding extra effects to the tag
+
+Three type of style sheet
+
+1.
+
+Inline style sheet -- > Within a tag we are applying a style using attribute "style"
+
+<ul style="list-style-image: url('i1.gif')">
+
+property ->list-style-image
+
+Calue-> url('i1.gif')
+
+2, 
+
+Embeded style sheet  --> all properties to the tags will be mentioned using <style> tag in head section
+
+
+
+
+<style>
+h1 {
+	text-decoration: underline;
+	font-family: arial;
+	background: yellow;
+	color: blue
+}
+
+p {
+	font-size: 14pt;
+	color: green
+}
+</style>
+
+
+
+
+In above example 
+h1 --> selector    ( selecting tags as per either name or id attribute or class attribute )
+
+{propertyname : value ;}
+
+
+All  <h1> and <p> tags will have same fomate specified in <style > within a page
+
+
+
+3.
+
+External style sheet
+
+
+All styles will be kept in a file called  .css for eg demo.css
+
+
+@CHARSET "ISO-8859-1";
+
+body {
+	background: cyan;
+	color: green
+}
+
+h1 {
+	background: orange;
+	font-family: Arial, Impact, Sans serif;
+	color: blue;
+	font-size: 30pt;
+	text-align: center
+}
+
+h2, h3 {
+	background: gold;
+	font-family: Arial, Impact, Sans Serif;
+	color: red
+}
+
+
+This css file will be lined in html as follows
+
+<head>
+<title>Example Of Linked Style Sheet</title>
+<link rel="stylesheet" href="demo2.css">
+</head>
+
+
+Multiple pages can use same styles
+
+======================
+
+
+Preference of style sheet
+
+1 Iniline
+2 Embeded
+3. external
+
+
+==========================================
+Selectors
+============================================
+
+h1 {
+	text-decoration: underline;
+	font-family: arial;
+	background: yellow;
+	color: blue
+}
+
+In above example 
+h1 --> selector    ( selecting tags as per either name or id attribute or class attribute )
+
+{propertyname : value ;}
+
+
+Types of selectors
+1
+type selector-->
+
+tagname  { 
+		property :value;
+	}
+eg
+
+h1
+{
+  font-family:calibri;
+  font-size:30px;
+  color:blue;
+}
+
+
+
+2. Class selector
+
+Generating common catagory we call it as class of styles
+
+and apply to any tag
+
+.classname {
+		property : value;
+	}
+
+for eg
+
+
+.divCls {
+	font-family: verdana;
+	font-style: bold;
+	color: grey;
+	font-size: 15px;
+}
+
+
+apply class to the tag
+
+<div class="divCls">
+<div class="divPra">
+
+
+
+	<h2 class="divCls"> Manjiri </h2>
+
+	<h2 class="divPra"> Manjiri </h2>
+
+Common styles can be applied to multiple tag using "class" attribute
+
+
+3.
+
+id selector -- > Every tag must have unique id attribute value
+and based on id tag will be selected and style will be applied
+
+tag #id 
+	{
+		property : value
+	}
+
+eg
+
+div#d1 {
+	font-family: verdana;
+	color: violet;
+	font-size: 15px;
+}
+
+in html id will located as follows
+
+<div id="d1">Do not go where the path may lead, go instead where
+		there is no path and leave a trail.</div>
+
+div#d1 will locate div tag of id =d1
+
+Unique style can be applied to unique tag
+
+
+4
+Psudo classes -- > predefined classes
+
+
+a:link {
+	text-decoration:none;
+	color:gray;
+}
+
+a:visited {
+	text-decoration:underline;
+	color:red;
+}
+
+a:hover {
+	text-decoration: none;
+	color: pink;
+	font-weight: bolder;
+	letter-spacing: 2px;
+
+
+
+5
+
+Attribute selector
+
+????
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,39 @@
+HTML -- > Hyper Text Markup language.
+ It is having syntax also called as tags which are used to design web site or web page.
+HTML  --> It generates only static page.  Only designing of page. Not interactive or it does not do any data processing;
+
+HTML 5 is the latest version
+
+Html 4 stayed for long time.
+
+Tag are wirttten as follows
+
+<b>  Showing bold text </b>
+
+
+There are 2 types of tags.
+
+Paired tags --
+<b>  </b>  -- > we are having opening tags and closing tags
+
+
+Unpaired tags -- No closing tags exists
+
+<br>  <hr>
+
+
+Html tags are not case sensitive
+
+
+Html page file extension should be .html  , earlier days it was  .htm
+
+
+It can be created in any text editor.
+
+
+
+
+
+
+
+

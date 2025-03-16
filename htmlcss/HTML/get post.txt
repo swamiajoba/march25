@@ -1,0 +1,17 @@
+Form has 2 ways of passing data
+
+
+get method
+--------------
+1. using get method form data is passed via url
+
+2. limited data can be passed
+
+
+
+post method
+--------------
+
+1. using post method form data is passed as http request body , NOT as a part of url
+
+2. unlimited data can be passed
