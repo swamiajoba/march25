@@ -1,0 +1,13 @@
+package com.repository;
+
+import java.util.List;
+import com.bean.Account;
+
+public interface AccountRepository {
+	public Account insertAccount(Account ac);
+	public Account updateAccount(Account ac,int aid);
+	public void deleteAccount(int aid);
+	public Account findAccountById(int aid);
+	public List<Account> findAllAccounts();
+	
+}
