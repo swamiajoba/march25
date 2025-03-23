@@ -1,0 +1,26 @@
+<p>ngif-ex works!</p>
+
+<button (click) ="getShow()" >Toggle</button>
+
+<h1 *ngIf="show">Text will be shown if show = true</h1>
+
+
+<hr>
+
+
+<div *ngIf="show;then ad1 else ad2"></div>
+
+<ng-template #ad1>
+<h1>This will be for if condtion is true</h1>
+<img src="assets/img1.jpg"/>
+</ng-template>
+
+<ng-template #ad2>
+    <h1>This will be for if condtion is false</h1>
+    <img src="assets/img2.jpg"/>
+</ng-template>
+
+<hr>
+<ng-container *ngIf="show">
+    Welcome, Manjiri!
+</ng-container> 

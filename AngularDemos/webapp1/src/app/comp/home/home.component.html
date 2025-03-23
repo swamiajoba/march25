@@ -1,0 +1,28 @@
+<h1>home works!</h1>
+<!--String interpoloation-->
+<div class="mb-3">
+    <label for="company" class="form-label">Company Name</label>
+    <input type="text" class="form-control" id="company" value={{companyName}} >
+  </div>
+<!--Property Bind -->
+  <div class="mb-3">
+    <label for="yr" class="form-label">Year of Starting</label>
+    <input type="text" class="form-control" id="yr" [value]="yearOfStart" >
+  </div>
+<!--Two way data bind-->
+  <div class="mb-3">
+    <label for="pr" class="form-label">Products</label>
+    <input type="text" class="form-control" id="pr"  [(ngModel)]="products" >
+  </div>
+
+  <!--evet binding-->
+  <div class="col-auto">
+    <button type="button" class="btn btn-primary mb-3" (click)="show()">Show data</button>
+  </div>
+
+  <hr>
+  <!--String interpoloation-->
+  <h3>Company Data </h3>
+  <h3>{{companyName}}</h3>
+  <h3>{{yearOfStart}}</h3>
+  <h3>{{products}}</h3>
