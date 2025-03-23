@@ -1,0 +1,51 @@
+npx -p @angular/cli@15 ng new webapp1
+
+cd webapp1   
+
+npx ng serve 
+
+
+npx ng g c comp/home
+
+
+D:\Mphasis\AngularDemos\prangapp1>npx ng build
+
+pipe generation command
+
+npx ng g pipe exponentialStrength
+
+======================
+D:\Mphasis\AngularDemos>npx -p @angular/cli@15 ng new prangapp1
+Need to install the following packages:
+@angular/cli@15.2.11
+Ok to proceed? (y)
+
+==============================
+
+Installing bootstrap in project
+
+npm install bootstrap@version --save
+D:\Mphasis\AngularDemos\prangapp1>npm install bootstrap@5 --save
+
+
+
+if you are going with npm install bootstrap
+
+then after installing in angular.json file search for
+
+styles and add the path like...
+
+"styles": [
+  "node_modules/bootstrap/dist/css/bootstrap.min.css",
+  "src/styles.css"
+]
+
+you can copy the relavent path from node_module > bootstrap > dist > css > bootstrap.min.css or you can copy node_module > bootstrap > dist > css > bootstrap.css
+
+in angular.json there are 2 styles, given path in both styles.
+
+then it should work perfectly I guess.
+
+
+============================
+npx -p @angular/cli@15 ng new  webapp2 

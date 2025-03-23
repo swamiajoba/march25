@@ -1,0 +1,4 @@
+create component addAccount
+data - aid ,customer, balance
+
+using all data bind concpet , bind data and display
