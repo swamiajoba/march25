@@ -1,0 +1,147 @@
+<p>template-driven works!</p>
+<form #contactForm="ngForm"  
+        (ngSubmit)="onSubmit(contactForm)"  
+         [appMatchPassword]="['password', 'confirmPassword']" >
+ 
+    <p>
+      <label for="firstname">First Name </label>
+      <input    type="text" 
+                id="firstname" 
+                name="firstname" 
+                required minlength="10" 
+                #firstname="ngModel"
+                [(ngModel)]="contact.firstname">
+    </p>
+    <div *ngIf="!firstname?.valid && (firstname?.dirty || firstname?.touched)" class="error">
+      <div *ngIf="firstname.hasError('required')">
+        First Name is required
+      </div>
+      <div *ngIf="firstname.hasError('minlength')">
+        First Name Minimum Length is 10
+      </div>
+    </div>
+   
+     <p>
+      <label for="lastname">Last Name </label>
+      <input    type="text" 
+                id="lastname" 
+                name="lastname" 
+                required maxlength="15" 
+                #lastname="ngModel" 
+                pattern="^[a-zA-Z]+$"  
+                [(ngModel)]="contact.lastname">
+    </p>
+    <div *ngIf="!lastname?.valid && (lastname?.dirty || lastname?.touched)" class="error">
+      <div *ngIf="lastname.hasError('required')">
+        Last Name is required
+      </div>
+      <div *ngIf="lastname.hasError('maxlength')">
+        Last Name Minimum Length is 15
+      </div>
+      <div *ngIf="lastname.hasError('pattern')">
+        Only characters are allowed
+      </div>
+    </div>
+   
+   
+   
+    <p>
+      <label for=" email">email </label>
+      <input    type="text" 
+                id="email" 
+                name="email" 
+                required email 
+                #email="ngModel" 
+                [(ngModel)]="contact.email">
+    </p>
+    <div *ngIf="!email?.valid && (email?.dirty || email?.touched)" class="error">
+      <div *ngIf="email.hasError('required')">
+         Email is required
+      </div>
+      <div *ngIf="email.hasError('email')">
+        Invalid Email Address
+      </div>
+    </div>
+
+    <p>
+      <label for="password">Password </label>
+      <input    type="text" 
+                id="password" 
+                name="password" 
+                required minlength="6"
+                #password="ngModel" 
+                [(ngModel)]="contact.password">
+    </p>
+    <div *ngIf="!password?.valid && (password?.dirty || password?.touched)" class="error">
+      <div *ngIf="password.hasError('required')">
+         Email is required
+      </div>
+      <div *ngIf="password.hasError('minlength')">
+        Password must have Minimum 6 characters
+      </div>
+    </div>
+   
+    <p>
+      <label for="confirmPassword">Confirm Password </label>
+      <input    type="text" 
+                id="confirmPassword" 
+                name="confirmPassword" 
+                required
+                #confirmPassword="ngModel" 
+                [(ngModel)]="contact.confirmPassword">
+    </p>
+    <div *ngIf="!confirmPassword?.valid && (confirmPassword?.dirty || confirmPassword?.touched)" class="error">
+      <div *ngIf="confirmPassword.hasError('required')">
+         Email is required
+      </div>
+      <div *ngIf="confirmPassword.hasError('matching')">
+        Confirm Password must match with Password
+      </div>
+    </div>
+   
+    <p>
+      <label for="gender">Geneder </label>
+      <input    type="radio" 
+                value="male" 
+                id="gender" 
+                name="gender" 
+                #gender="ngModel" 
+                required 
+                [(ngModel)]="contact.gender">  Male
+      <input    type="radio" 
+                value="female" 
+                id="gender" 
+                name="gender" 
+                #gender="ngModel" 
+                required
+                [(ngModel)]="contact.gender"> Female
+    </p>
+    <div *ngIf="!gender?.valid && (gender?.dirty || gender?.touched)" class="error">
+      <div *ngIf="gender.hasError('required')">
+        Gender is required
+      </div>
+    </div>
+   
+   
+    <p>
+      <label for="isToc">Accept TOC</label>
+      <input    type="checkbox" 
+                id="isToc" 
+                name="isToc" 
+                required 
+                #isToc="ngModel" 
+                [(ngModel)]="contact.isToc">
+    </p>
+    <div *ngIf="!isToc?.valid && (isToc?.dirty || isToc?.touched)" class="error">
+      <div *ngIf="isToc.hasError('required')">
+        Please accept the TOC
+      </div>
+    </div>
+    
+    <p>
+      <button type="submit" [disabled]="!contactForm.valid">Submit</button>
+    </p>
+   
+    <p>{{contactForm.valid}} </p>
+   
+  </form>

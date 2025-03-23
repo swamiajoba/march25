@@ -1,0 +1,20 @@
+<h1>Application {{title}} is Running</h1>
+<input type="button" value="TemplateForm" (click)="setVal($event)"/>
+<input type="button" value="ReactiveForm" (click)="setVal($event)"/>
+<input type="button" value="PostList" (click)="setVal($event)"/>
+
+<input type="button" value="AccountList" (click)="setVal($event)"/>
+<div class="container" *ngIf="btVal==='TemplateForm'">
+  <app-template-driven></app-template-driven>
+</div>
+<div class="container" *ngIf="btVal==='ReactiveForm'">
+  <app-reactive-form></app-reactive-form>
+</div>
+<div class="container" *ngIf="btVal==='PostList'">
+  <app-http-get-ex></app-http-get-ex>
+</div>
+
+
+<div class="container" *ngIf="btVal==='AccountList'">
+  <app-list-accounts></app-list-accounts>
+</div>
