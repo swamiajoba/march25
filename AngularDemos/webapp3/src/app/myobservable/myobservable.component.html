@@ -1,0 +1,15 @@
+<p>myobservable works!</p>
+
+<p>comp1 works!</p>
+<button type="button" (click)="myobservable()">Custom Observable </button>
+<br>
+<button type="button" (click)="myobservable1()">Custom Observable with of() method</button>
+<br>
+<button type="button" (click)="mymapfun()">map function</button>
+<hr>
+<button type="button" (click)="subjectfun()">Subject in angular</button>
+<hr>
+<h1>Data in observable </h1>
+<h3 *ngFor="let name of myObsData | async">
+    {{name}}
+</h3>

@@ -1,0 +1,12 @@
+<p>asyncvalidation works!</p>
+
+<form [formGroup]="form" (submit)="onSubmit($event)">
+    <label>
+      Letter: <input formControlName="letter" />
+    </label>
+    <div *ngIf="letter?.hasError('valueError')">
+      Letter already exists
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+  

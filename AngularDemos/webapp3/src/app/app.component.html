@@ -1,0 +1,26 @@
+<h2>Application {{title}} is Running</h2>
+<input type="button" value="TemplateForm" (click)="setVal($event)"/>
+<input type="button" value="ReactiveForm" (click)="setVal($event)"/> 
+<input type="button" value="PromiseComp" (click)="setVal($event)"/>
+<input type="button" value="ObservableComp" (click)="setVal($event)"/>
+<input type="button" value="AsyncValidation" (click)="setVal($event)"/>
+
+<div class="container" *ngIf="btVal==='TemplateForm'">
+  <app-template-driven></app-template-driven>
+</div>
+
+<div class="container" *ngIf="btVal==='ReactiveForm'">
+  <app-reactive-form></app-reactive-form>
+</div>
+
+<div class="container" *ngIf="btVal==='PromiseComp'">
+  <app-promise></app-promise>
+</div>
+
+<div class="container" *ngIf="btVal==='ObservableComp'">
+  <app-myobservable></app-myobservable>
+</div>
+
+<div class="container" *ngIf="btVal==='AsyncValidation'">
+  <app-asyncvalidation></app-asyncvalidation>
+</div>
